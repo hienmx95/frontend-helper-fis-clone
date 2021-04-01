@@ -57,7 +57,6 @@ export default function (
         if ( error.response ) {
           const err = error.response;
           if ( err.status === 401 ) {
-            removeToken();
             window.location.href = `/login?ref=${ window.location.href }`;
           } else {
             handleNotification( method, err.data, {
