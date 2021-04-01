@@ -97,8 +97,6 @@ export default function ( url, method, data, params, baseURL, notification ) {
         var err = error.response;
 
         if ( err.status === 401 ) {
-          removeToken();
-          window.location.href = "/login?ref=" + window.location.href;
         } else {
           handleNotification( method, err.data, _extends( {
             show: true,
