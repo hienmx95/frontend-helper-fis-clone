@@ -54,7 +54,6 @@ export var setCurrentUser = function setCurrentUser () {
       }
     } )["catch"]( function ( error ) {
       if ( error.response && error.response.status === 401 ) {
-        window.location.href = "/login?ref=" + window.location.href;
       } else {
         console.error( 'setCurrentUser error: ', error );
       }
